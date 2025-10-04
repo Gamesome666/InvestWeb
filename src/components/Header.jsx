@@ -122,6 +122,14 @@ export default function Header() {
                 <div className="absolute left-0 top-full pt-2 w-64">
                   <div className="bg-white rounded-lg shadow-xl border border-gray-100 p-4">
                     <Link 
+                      to="/community" 
+                      className="block py-2 px-3 rounded hover:bg-gray-50 transition-colors"
+                      onClick={() => setResourcesDropdownOpen(false)}
+                    >
+                      <div className="font-medium">创作者社区</div>
+                      <div className="text-sm text-gray-500">连接投资者与创业者</div>
+                    </Link>
+                    <Link 
                       to="/faq" 
                       className="block py-2 px-3 rounded hover:bg-gray-50 transition-colors"
                       onClick={() => setResourcesDropdownOpen(false)}
@@ -226,6 +234,9 @@ export default function Header() {
               </Link>
               <Link to="/returns" className="block text-gray-700 hover:text-primary-600 font-medium">
                 投资回报
+              </Link>
+              <Link to="/community" className="block text-gray-700 hover:text-primary-600 font-medium">
+                创作者社区
               </Link>
               <Link to="/faq" className="block text-gray-700 hover:text-primary-600 font-medium">
                 常见问题

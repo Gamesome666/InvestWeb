@@ -15,6 +15,7 @@ import InvestmentSuccess from './pages/InvestmentSuccess'
 import Blockchain from './pages/Blockchain'
 import FAQ from './pages/FAQ'
 import ThankYou from './pages/ThankYou'
+import Community from './pages/Community'
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/blockchain" element={<Blockchain />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/community" element={<Community />} />
           </Routes>
         </main>
         <Footer />
