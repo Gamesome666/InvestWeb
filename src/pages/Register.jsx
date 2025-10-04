@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Register() {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
-    name: '',
+    fullName: '',
     email: '',
     phone: '',
     investorType: 'individual',
@@ -15,7 +17,8 @@ export default function Register() {
     e.preventDefault()
     console.log('Form submitted:', formData)
     // Here you would send data to Google Sheets or Airtable
-    alert('Thank you for your interest! We will contact you soon.')
+    // Navigate to thank you page with form data
+    navigate('/thank-you', { state: { formData } })
   }
 
   const handleChange = (e) => {
@@ -57,9 +60,9 @@ export default function Register() {
                 </label>
                 <input
                   type="text"
-                  name="name"
+                  name="fullName"
                   required
-                  value={formData.name}
+                  value={formData.fullName}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all"
                   placeholder="John Doe"

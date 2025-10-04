@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { LogoMark } from './Logo'
 
 export default function Footer() {
   return (
@@ -7,11 +8,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">I</span>
-              </div>
-              <span className="text-xl font-bold text-white">InvestHub</span>
+            <div className="mb-4">
+              <LogoMark size="small" variant="white" />
             </div>
             <p className="text-sm text-gray-400">
               Where innovation meets investment. Democratizing startup investing through blockchain technology.

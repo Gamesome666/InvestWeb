@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { LogoMark } from './Logo'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -9,11 +10,8 @@ export default function Header() {
       <nav className="container-custom py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">I</span>
-            </div>
-            <span className="text-2xl font-bold text-gray-900">InvestHub</span>
+          <Link to="/" className="hover:opacity-80 transition-opacity">
+            <LogoMark size="default" variant="color" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -24,11 +22,14 @@ export default function Header() {
             <Link to="/how-it-works" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
               How It Works
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
-              About
+            <Link to="/blockchain" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+              Blockchain
             </Link>
             <Link to="/returns" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
               Returns
+            </Link>
+            <Link to="/faq" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+              FAQ
             </Link>
           </div>
 
@@ -64,11 +65,17 @@ export default function Header() {
             <Link to="/how-it-works" className="block text-gray-700 hover:text-primary-600 font-medium">
               How It Works
             </Link>
-            <Link to="/about" className="block text-gray-700 hover:text-primary-600 font-medium">
-              About
+            <Link to="/blockchain" className="block text-gray-700 hover:text-primary-600 font-medium">
+              Blockchain
             </Link>
             <Link to="/returns" className="block text-gray-700 hover:text-primary-600 font-medium">
               Returns
+            </Link>
+            <Link to="/faq" className="block text-gray-700 hover:text-primary-600 font-medium">
+              FAQ
+            </Link>
+            <Link to="/about" className="block text-gray-700 hover:text-primary-600 font-medium">
+              About
             </Link>
             <div className="pt-4 space-y-2">
               <button className="block w-full text-center text-primary-600 font-semibold py-2">
